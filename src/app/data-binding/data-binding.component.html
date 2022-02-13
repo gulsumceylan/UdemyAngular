@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>
+      One Way Binding
+      <span style="font-size: 0.9rem; color: cadetblue">
+        from component to DOM</span
+      >
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Interpolaration</h3>
+      <p>{{ user.name }}</p>
+      <p>Hesaplama: {{ 1 + 3 }}</p>
+      <img src="{{ user.img }}" />
+    </div>
+
+    <div class="col-md-2">
+      <h3>Property Binding</h3>
+      <input [type]="type" [value]="user.job" />
+    </div>
+
+    <div class="col-md-2">
+      <h3>Attribute Binding</h3>
+      <input
+        [type]="type"
+        [value]="user.job"
+        [attr.disabled]="!user.isEditable ? 'disabled' : null"
+      />
+    </div>
+
+    <div class="col-md-2">
+      <h3>Class Binding</h3>
+      <p [class.red]="user.name === 'Gülsüm' ? true : false">Renk değeri</p>
+    </div>
+
+    <div class="col-md-2">
+      <h3>Style Binding</h3>
+      <p [style.color]="user.name === 'Gülsüm' ? 'orange' : 'blue'">
+        Style Color
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <h1>
+      One Way Binding
+      <span style="font-size: 0.9rem; color: cadetblue">
+        from DOM to Component</span
+      >
+    </h1>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Event Binding</h3>
+            <input type="text" [value]="user.name" (keyup.enter)="inputSubmit($event)">
+            <button (click)="buttonClicked()">Ok</button>
+          </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <h1>
+        Two Way Binding    <!--Genelde formlarda kullanılır-->
+     </h1>
+     <div class="col-md-12">
+         <h3> ngModel </h3>
+         <input type="text" [(ngModel)]="user.name" >
+         <p> {{user.name}} </p>
+     </div>
+  </div>
+
+</div>
