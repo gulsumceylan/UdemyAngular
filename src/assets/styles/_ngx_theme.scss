@@ -1,0 +1,6 @@
+$my-button-theme: igx-button-theme(
+  $foreground: white,
+  $background: black
+);
+// Pass the theme to the igx-button component mixin
+@include igx-button($my-button-theme);
