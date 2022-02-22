@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -17,7 +17,10 @@ import { IgxNavbarModule,IgxIconModule, IgxNavigationDrawerModule } from 'ignite
 
 import { CookieService } from 'ngx-cookie-service';
 
+import localeTr from "@angular/common/locales/tr";
+import localeExtraTr from "@angular/common/locales/extra/tr";
 
+registerLocaleData(localeTr,"tr-Tr",localeExtraTr);
 
 
 @NgModule({
