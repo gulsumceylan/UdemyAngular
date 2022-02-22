@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-3">
+        <h3>lowercase</h3>
+         <p>normal hali : {{title}}</p> 
+         <p>lowercase : {{title | lowercase}}</p> 
+    </div>
+
+    <div class="col-md-3">
+        <h3>titlecase</h3>
+         <p>lowercase : {{title | titlecase}}</p> 
+    </div>
+
+    <div class="col-md-3">
+        <h3>uppercase</h3>
+         <p>uppercase : {{title | uppercase}}</p> 
+         <p>uppercase - Tr : {{ turkishUpperCaseVal}}</p> 
+    </div>
+
+    <div class="col-md-3">
+        <h3>Date</h3>
+         <p>normal : {{today}}</p> 
+         <p>pipe date : {{today | date:"fullDate"}}</p> 
+         <p>Tr- pipe date : {{today | date:"fullDate" : "":"tr-Tr"}}</p> 
+    </div>
+
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-3">
+        <h3>Currency</h3>
+         <p>normal : {{cashValue}}</p> 
+         <p>currency: {{ cashValue | currency}}</p> 
+         <p>currency: {{ cashValue | currency : "EUR"}}</p> 
+         <p>currency: {{ cashValue | currency : "TRY":"symbol":"1.2-2":"tr-Tr"}}</p> 
+    </div>
+    <div class="col-md-3">
+        <h3>Persent</h3>
+         <p>normal : {{percentVal}}</p> 
+         <p>pipe  : {{percentVal | percent}}</p> 
+         <p>Tr- pipe : {{percentVal | percent:"":"tr-Tr"}}</p> 
+    </div>
+
+    <div class="col-md-3">
+        <h3>Slice</h3>
+         <p>normal : {{cityName}}</p> 
+         <p>pipe: {{ cityName | slice:0:3}}</p> 
+         <p>pipe: {{ cityName | slice:-2}}</p> 
+         <p>pipe: {{ cityName | slice:5}}</p> 
+         <p>pipe: {{ cityName | uppercase| slice:5}}</p>
+    </div>
+    <div class="col-md-3">
+        <h3>Json</h3>
+         <p>normal</p> 
+         <pre> {{objectVal}} </pre>
+
+         <p>pipe</p> 
+         <pre> {{objectVal | json}} </pre>
+    </div>
+
+
+</div>
+
+<br>
+<br>
+<div class="row">   
+    <div class="col-md-3">
+        <h3>Custom Pipe</h3>
+        <p>normal {{cash}} </p> 
+         <p>pipe {{cash |tl}} </p> 
+    </div>
+
+    <div class="col-md-3">
+        <h3>Custom Pipe 2</h3>
+         <ul>
+             <li *ngFor="let city of cities "> {{city}} </li>
+         </ul>
+         <ul>
+            <li *ngFor="let city of cities  | myFiltering : 'a'"> {{city}} </li>
+        </ul>
+    </div>
+
+
+</div>
+</div>
+
