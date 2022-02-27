@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:"directives", loadChildren: ()=> import("./directives/directives.module").then(m=>m.DirectivesModule)},
   {path:"pipes", loadChildren: ()=> import("./pipes/pipes.module").then(m=>m.PipesModule)},
   {path:"parents", loadChildren: ()=> import("./parents/parents.module").then(m=>m.ParentsModule)},
+  {path:"forms", loadChildren: ()=> import("./forms/forms.module").then(m=>m.AngularFormsModule)},
   {path:"**", component:HomeComponent},
  
 ];

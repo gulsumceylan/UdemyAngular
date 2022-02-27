@@ -1,16 +1,11 @@
-<div class="content-wrap">
-    <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
-      <ng-template igxDrawer>
-        <nav>
-              <!-- 
-                   <span igxDrawerItem [isHeader]="true">Sidebar Listesi</span>
-         <span igxDrawerItem igxRipple routerLink="home">Home</span>
-         <span igxDrawerItem igxRipple routerLink="role">Role</span>
-         <span igxDrawerItem igxRipple routerLink="user">User</span>
-         <span igxDrawerItem igxRipple routerLink="data-binding">Data-Binding</span>
-    -->
-    <ul>
-        <li routerLink="home">Home</li>
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:1000px">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+    <span class="fs-4">Sidebar</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li routerLink="home">Home</li>
         <li routerLink="role">Role</li>
         <li routerLink="user">User</li>
         <ul>
@@ -22,12 +17,17 @@
         <li routerLink="directives">Directives</li>
         <li routerLink="pipes">Pipes</li>
         <li routerLink="parents">Parents</li>
-    </ul>
-        
-        </nav>
-      </ng-template>
-    </igx-nav-drawer>
-    <main>
-      <!-- app content -->
-    </main>
-  </div>
+        <li routerLink="forms">Forms</li>
+  </ul>
+  <hr>
+</div>
+
+
+
+
+
+
+
+
+
+

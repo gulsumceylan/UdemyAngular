@@ -1,0 +1,49 @@
+<div class="row">
+    <h2 style="padding: 20px;">Reaktive Forms - Register</h2>
+    <div class="col-md-12">
+        <form [formGroup]="registerForm" (ngSubmit)="save(registerForm)">
+
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="first-name">First Name: </label>
+                    <input id="first-name" type="text" formControlName="firstName">
+
+                    <button (click)="randomUserName($event)">Random isim türet</button>
+
+                    <p style="color: red;" 
+                    *ngIf="registerForm?.controls?.firstName?.errors?.required 
+                    && registerForm?.controls?.firstName?.dirty" >
+                        Bu Alan Zorunludur!
+                    </p>
+
+                    <p style="color: red;" 
+                    *ngIf="registerForm?.controls?.firstName?.errors?.blacklist 
+                    && registerForm?.controls?.firstName?.dirty" >
+                        *ğ harfini kullanamazsınız!
+                    </p>
+
+                    <p style="color: red;" 
+                    *ngIf="registerForm?.controls?.firstName?.errors?.whitespace 
+                    && registerForm?.controls?.firstName?.dirty" >
+                        Boşluk karakterini kullanmayınız!
+                    </p>
+
+                    <p style="color: red;" 
+                    *ngIf="registerForm?.controls?.firstName?.errors?.userNameExist 
+                    && registerForm?.controls?.firstName?.dirty" >
+                        Bu isim daha önce kullanılmıştır!
+                    </p>
+
+                </div>
+                <div class="col-md-5">
+                    <label for="age">Age: </label>
+                    <input id="age" type="number" formControlName="age">
+                </div>
+
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success" [disabled]="!registerForm?.valid">Kayıt ol!</button>
+                </div>
+            </div>
+          </form>
+    </div>
+</div>
