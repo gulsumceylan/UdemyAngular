@@ -11,3 +11,5 @@ export * from "./custom-validators/noWhiteSpace.validator"
 export * from "./custom-validators/userNameExist.validator"
 
 export * from "./services/user.service"
+export * from "./services/map.service"
+export * from "./services/role.service"
