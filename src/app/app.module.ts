@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { RoleComponent } from './role/role.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
@@ -19,6 +18,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 import localeTr from "@angular/common/locales/tr";
 import localeExtraTr from "@angular/common/locales/extra/tr";
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localeTr,"tr-Tr",localeExtraTr);
 
@@ -26,7 +26,6 @@ registerLocaleData(localeTr,"tr-Tr",localeExtraTr);
 @NgModule({
   declarations: [
     AppComponent,
-    RoleComponent,
     NavbarComponent,
     SidebarComponent,
   ],
@@ -48,6 +47,7 @@ registerLocaleData(localeTr,"tr-Tr",localeExtraTr);
     IgxNavbarModule,
     IgxIconModule,
     IgxNavigationDrawerModule,
+    HttpClientModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
